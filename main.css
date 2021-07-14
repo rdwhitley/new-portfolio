@@ -16,6 +16,7 @@ article {
   top:0; left:0;
   overflow: hidden;
   animation: blur 11s infinite;
+  z-index: -1;
 }
 @keyframes blur {
   23% {filter: url(#none);}
@@ -33,6 +34,7 @@ article {
 }
 pre {
   color: #80FF00;
+  pointer-events: none;
   text-shadow: 0 0 2px #60F000, 1px -1px 2px #60F000;
   font-weight: 400;
   font-size: 1.5rem;
@@ -103,6 +105,22 @@ pre:nth-child(4n) {
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
+}
+.section {
+  transition: all 1s;
+  transform-origin: 50% 50%;
+  border:  2px solid blue;
+}
+
+.section:hover {
+  transform: scale(1.2);
+}
+
+.overlay {
+    height:0px;
+    overflow:visible;
+    pointer-events:none;
+    background:none !important;
 }
 
 @media only screen and (max-width: 768px) {
