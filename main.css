@@ -18,6 +18,18 @@ article {
   animation: blur 11s infinite;
   z-index: -1;
 }
+
+header,section {
+  text-align: center;
+}
+
+.intro {
+  font-family: 'B612', 'sans-serif';
+  color: white;
+  font-size: 3rem;
+}
+
+
 @keyframes blur {
   23% {filter: url(#none);}
   24% {filter: url(#svg-blur-h);}
@@ -94,12 +106,8 @@ pre:nth-child(4n) {
   color: #000;
 }
 
-.pills {
-  margin: 0 auto;
-}
-
 .centered {
-  display: flex;
+  display: block;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -116,12 +124,6 @@ pre:nth-child(4n) {
   transform: scale(1.2);
 }
 
-.overlay {
-    height:0px;
-    overflow:visible;
-    pointer-events:none;
-    background:none !important;
-}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
