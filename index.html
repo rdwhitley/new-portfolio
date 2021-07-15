@@ -7,6 +7,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=B612:ital@1&display=swap" rel="stylesheet">
+	<!-- CSS only -->
 	<title>Rafiq's Portfolio</title>
 </head>
 <body>
@@ -14,11 +15,20 @@
 		<h1 class='intro'>Rafiq's Developer Portfolio</h1>
 	</header>
 	<br>
+
+	<div id="myModal" class="modal">
+	  	<div class="modal-content">
+		    <span class="close" onclick='closeModal()'>&times;</span>
+		    <p id='modal-text'>test</p>
+		    <button type='submit' class='btn' id='modal-btn'></button>
+	  	</div>
+	</div>
+
 	<main>
 		<section class="centered">
 			<div style='display: flex'>
-				<img src="red_pill.svg" alt='red pill' class='section'>
-				<img src="blue_pill.svg" alt='blue pill' class="section">
+				<img src="red_pill.svg" alt='red pill' class='section' onclick="getSelectedPill(event)">
+				<img src="blue_pill.svg" alt='blue pill' class="section" onclick="getSelectedPill(event)">
 			</div>
 			<br>
 			<h2 class='intro' style='font-size: 1.5rem'>Please choose a pill if this site has caught your attention so far</h2>
@@ -52,5 +62,45 @@
 			  <pre>但是，房地 产开发商 在所需 方向大海 如果谁 觉得它 永远是 存在的 开发者 没事的实践中，凭借本披 露声明 和两个做法毫无疑问不厌其烦 地通过   kseso   可见的便 利性也不 会阻 止他的怒气</pre>
 		</article>
 	</main>
+<script>
+	let modal = document.getElementById("myModal");
+	let btn = document.getElementById("myBtn");
+
+	let span = document.getElementsByClassName("close")[0];
+
+	function getSelectedPill(e) {
+	  const selectedPill = e.target.alt.split(" ")[0]
+	  let message,submitMsg,submitColor;
+	  if(selectedPill ==='red') {
+	  	 message = "Taking the red pill will reveal Rafiq's real portfolio please consume to see more"
+	  	 submitMsg = 'Consume Red Pill';
+	  	 submitColor = '#f14e4e'
+	  } else {
+	  	 message = "Taking the blue pill will lead you away from this site and you will forget you were ever here"
+	  	 submitMsg = "Consume Blue Pill"
+	  	 submitColor = "#0096FF"
+	  }
+	  showModal(message,submitMsg,submitColor)
+	}
+
+	function showModal(message,submitMsg,submitColor){
+		document.querySelector('#modal-text').innerHTML = message
+		document.querySelector('#modal-btn').innerHTML = submitMsg
+		document.querySelector('#modal-btn').style.backgroundColor = submitColor;
+		modal.style.display = 'block'
+		
+
+		window.onclick = function(event) {
+	 	 if (event.target == modal) {
+	    		modal.style.display = "none";
+	  		}
+		}
+	}
+
+
+	function closeModal() {
+		modal.style.display = "none";
+	}
+</script>
 </body>
 </html>
