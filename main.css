@@ -29,21 +29,6 @@ header,section {
   font-size: 3rem;
 }
 
-
-/*@keyframes blur {
-  23% {filter: url(#none);}
-  24% {filter: url(#svg-blur-h);}
-  25% {filter: url(#none);}
-  26% {filter: url(#svg-blur-h);}
-  27% {filter: url(#none);}
-  28% {filter: url(#svg-blur-h);}
-  35% {filter: url(#none);}
-  80% {filter: url(#none);}
-  81% {filter: url(#svg-blur-v);}
-  87% {filter: url(#none);}
-  88% {filter: url(#svg-blur-v);}
-  89% {filter: url(#none);}
-}*/
 pre {
   color: #80FF00;
   pointer-events: none;
@@ -60,11 +45,6 @@ pre {
  text-orientation: upright;
   transform: translatey(-100%);
   animation: matrix linear 30s infinite;
-}
-@keyframes matrix {
-  100% {
-    transform: translatey(100%);
-  }
 }
 pre:nth-child(5n+1) {
   animation-delay: 1s;
