@@ -128,18 +128,14 @@ pre:nth-child(4n) {
 
 /* The Close Button */
 .close {
+  display: inline-block;
   color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
+
 
   .btn{
   display:inline-block;
@@ -174,6 +170,12 @@ pre:nth-child(4n) {
 }
 
 @media (min-width:801px)  {
+  .close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
   @keyframes blur {
   23% {filter: url(#none);}
   24% {filter: url(#svg-blur-h);}
