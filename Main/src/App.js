@@ -5,9 +5,17 @@ class App extends React.Component {
     render(){
         return (
             <div className='container'>
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
+                <aside className='certs'>Aside</aside>
+                <aside className='main'>Main 
+                    <nav>
+                        <ul id='links'>
+                            <li><a>1</a></li>
+                            <li><a>2</a></li>
+                            <li><a>3</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+                <footer className='sites'>Footer</footer>
             </div>
         )
     }
