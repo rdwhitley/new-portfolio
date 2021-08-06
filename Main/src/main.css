@@ -1,0 +1,51 @@
+.container {
+	display: grid;
+	height: 100vh;
+	width: 100vw;
+	grid-template-areas:  "main  certs"
+						  "main  certs"
+						  "sites sites";
+}
+
+.certs {
+	grid-area: certs;
+	color: red;
+	border: 2px solid red;
+	background-color: yellow;
+}
+
+.main {
+	grid-area:  main;
+	display:  flex;
+	color: blue;
+	background-color:  pink;
+	border:  2px solid blue;
+}
+
+.main > nav {
+	margin-left: auto;
+	color:  green;
+}
+
+ul#links > li {
+	display: inline;
+	padding-right: 50px;
+}
+
+.sites {
+	grid-area: sites;
+	color: green;
+	border:  2px solid green;
+	background-color: skyblue;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+		display: grid;
+		height: 100vh;
+		width: 100vw;
+		grid-template-areas: "main"
+						  	 "certs"
+						     "sites";
+	}
+}
