@@ -1,0 +1,14 @@
+.icon {
+	height: 3rem;
+	widows: 3rem;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	border: 2px solid;
+}
+
+.flex > a {
+	margin-right: 2rem;
+}

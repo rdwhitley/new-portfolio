@@ -1,5 +1,6 @@
 import React from 'react'
-import person from'../assets/person_placeholder.png';
+import person from '../assets/person_placeholder.png';
+import Icon from '../components/Icons/icon.js';
 
 class App extends React.Component {
     render(){
@@ -16,7 +17,9 @@ class App extends React.Component {
                         </ul>
                     </nav>
                 </aside>
-                <footer className='sites'>Footer</footer>
+                <footer className='sites'>
+                    <Icon />
+                </footer>
             </div>
         )
     }
